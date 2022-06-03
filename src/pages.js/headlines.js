@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import axios from 'axios';
+
 import { CardMedia, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import { useNavigate } from 'react-router-dom';
+import axios from "axios";
 function Headlines(){
     const [articles,setArticles] = useState([]);
     const [loader, setLoader]=useState(false);
@@ -14,7 +15,7 @@ function Headlines(){
     }
     const getNews = ()=>{
         setLoader(true);
-        let api = "https://newsapi.org/v2/everything?q=tesla&from=2022-05-02&sortBy=publishedAt&apiKey=61ec6434a3494e55ac75fab46e3865bd";
+        let api = "https://newsapi.org/v2/everything?q=tesla&from=2022-05-03&sortBy=publishedAt&apiKey=61ec6434a3494e55ac75fab46e3865bd";
         
         axios
         .get(api)

@@ -136,11 +136,13 @@ function Dashboard(props) {
         sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
       >
         <Toolbar />
+        <div className='container-routes'>
          <Routes>
            <Route path='/' element={<Headlines/>}/>
            <Route path='/sports' element={<Sports/>}/>
            <Route path='/onenews' element={<OneNews/>}/>
          </Routes>
+        </div>
       </Box>
     </Box>
   );
